@@ -36,19 +36,19 @@
    <h3>Posso usar o banheiro do lafac?</h3>
   <div id="answer">
    
-    SIM
+    SIM   <!--ATUALIZE O STATUS AQUI-->
+    
     <p id="since"></p>
   </div>
 
   <script>
-    // TODO: update this on commit automatically
-    // Update when #answer changes
-    var LAST_UPDATE = new Date(document.lastModified); // Thu Jan 05 2017 10:00:15 GMT-0500 (EST)
+
+    var LAST_UPDATE = new Date(document.lastModified);
 
     var sinceEl = document.getElementById('since');
 
     function getTimeSince(starttime) {
-      var t = +new Date - starttime;  // Date.now() doesnt work before IE9
+      var t = +new Date - starttime; 
       var seconds = Math.floor((t / 1000) % 60);
       var minutes = Math.floor((t / 1000 / 60) % 60);
       var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -77,26 +77,25 @@
 
       var days = time.days;
       if (days > 0) {
-        countdownStr += days + ' ' + pluralize('dias', days) + ', ';
+        countdownStr += days + ' ' + pluralize('dia', days) + ', ';
       }
 
       var hours = time.hours;
       if (hours > 0) {
-        countdownStr += hours + ' ' + pluralize('horas', hours) + ', ';
+        countdownStr += hours + ' ' + pluralize('hora', hours) + ', ';
       }
 
       var minutes = time.minutes;
-      countdownStr += minutes + ' ' + pluralize('minutos', minutes) + ' , ';
+      countdownStr += minutes + ' ' + pluralize('minuto', minutes) + ' e ';
 
       var seconds = time.seconds;
-      countdownStr += seconds + ' ' + pluralize('segundos', seconds);
+      countdownStr += seconds + ' ' + pluralize('segundo', seconds);
 
       countdownStr += ' atras)';
 
       sinceEl.innerText = countdownStr;
     }
 
-    // Smaller interval than 1s since people may open browser in between seconds
     setInterval(updateTimer, 100);
   </script>
 </body>
