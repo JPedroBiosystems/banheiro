@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Posso usar o banheiro do Lafac?</title>
   <style>
+   a {
+     color: #000;
+   }
     #answer {
       font-size: 6em;
       font-weight: 700;
@@ -25,7 +28,7 @@
       transform: translate(-50%, -50%);
     }
     #posso {
-      font-size: 1em;
+      font-size: 0.3em;
       margin: 0 auto;
       text-align: center;
     }
@@ -34,24 +37,51 @@
       margin: 0 auto;
       text-align: center;
     }
-    #versao {
-      font-size: 0.10em;
+    #atualize {
+      font-size: 0.7em;
+      position: relative;
       margin: 0 auto;
       text-align: center;
+      text-transform:uppercase;
+    }
+    #versao {
+      font-size: 0.6em;
+      position: relative;
+      margin: 10px auto;
+      text-align: center;
+
+    }
+    #footer {
+
+      position:absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+  width: 300px;
+  height:50px;
+
+
     }
   </style>
 </head>
 <body>
 
   <div id="answer">
+    <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/20407-200.png" style="width:120px; margin-bottom:10px;" alt="">
    <p id="posso">Posso usar o banheiro do lafac?</p>
-    
-    SIM   <!--ATUALIZE O STATUS AQUI-->
-    
-    <p id="since"></p>
-    <p id="versao">Versão Alpha</p>
-  </div>
 
+    SIM   <!--ATUALIZE O STATUS AQUI-->
+
+    <p id="since"></p>
+
+  </div>
+<div id="footer">
+<div class="footerw">
+
+    <a href="https://github.com/Lafac/banheiro"><p id="atualize">Atualize o status via repositório do github</p></a>
+    <p id="versao">Versão Alpha</p>
+</div></div>
   <script>
 
     var LAST_UPDATE = new Date(document.lastModified);
@@ -59,7 +89,7 @@
     var sinceEl = document.getElementById('since');
 
     function getTimeSince(starttime) {
-      var t = +new Date - starttime; 
+      var t = +new Date - starttime;
       var seconds = Math.floor((t / 1000) % 60);
       var minutes = Math.floor((t / 1000 / 60) % 60);
       var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
