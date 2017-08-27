@@ -14,6 +14,16 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
+     #answer h3 {
+      font-size: 2em;
+      font-weight: 500;
+      left: 50%;
+      margin: 0;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     #since {
       font-size: 0.15em;
@@ -25,7 +35,7 @@
 <body>
   
   <div id="answer">
-    <h1>Posso usar o banheiro do lafac?</h1>
+    <h3>Posso usar o banheiro do lafac?</h3>
     SIM
     <p id="since"></p>
   </div>
@@ -67,19 +77,19 @@
 
       var days = time.days;
       if (days > 0) {
-        countdownStr += days + ' ' + pluralize('day', dias) + ', ';
+        countdownStr += days + ' ' + pluralize('day', days) + ', ';
       }
 
       var hours = time.hours;
       if (hours > 0) {
-        countdownStr += hours + ' ' + pluralize('hour', horas) + ', ';
+        countdownStr += hours + ' ' + pluralize('hour', hours) + ', ';
       }
 
       var minutes = time.minutes;
-      countdownStr += minutes + ' ' + pluralize('minute', minutos) + ' and ';
+      countdownStr += minutes + ' ' + pluralize('minute', minutes) + ' and ';
 
       var seconds = time.seconds;
-      countdownStr += seconds + ' ' + pluralize('second', segundos);
+      countdownStr += seconds + ' ' + pluralize('second', seconds);
 
       countdownStr += ' atras)';
 
