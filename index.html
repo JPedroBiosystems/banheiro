@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Does the CSSU have a microwave?</title>
+  <title>Posso usar o banheiro do Lafac?</title>
   <style>
     #answer {
       font-size: 6em;
@@ -61,25 +61,25 @@
     function updateTimer() {
       var time = getTimeSince(LAST_UPDATE);
 
-      var countdownStr = '(updated ';
+      var countdownStr = '(atualizado há ';
 
       var days = time.days;
       if (days > 0) {
-        countdownStr += days + ' ' + pluralize('day', days) + ', ';
+        countdownStr += days + ' ' + pluralize('day', dias) + ', ';
       }
 
       var hours = time.hours;
       if (hours > 0) {
-        countdownStr += hours + ' ' + pluralize('hour', hours) + ', ';
+        countdownStr += hours + ' ' + pluralize('hour', horas) + ', ';
       }
 
       var minutes = time.minutes;
-      countdownStr += minutes + ' ' + pluralize('minute', minutes) + ' and ';
+      countdownStr += minutes + ' ' + pluralize('minute', minutos) + ' and ';
 
       var seconds = time.seconds;
-      countdownStr += seconds + ' ' + pluralize('second', seconds);
+      countdownStr += seconds + ' ' + pluralize('second', segundos);
 
-      countdownStr += ' ago)';
+      countdownStr += ' atras)';
 
       sinceEl.innerText = countdownStr;
     }
