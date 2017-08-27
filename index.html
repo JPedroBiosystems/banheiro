@@ -73,7 +73,7 @@
     function updateTimer() {
       var time = getTimeSince(LAST_UPDATE);
 
-      var countdownStr = '(atualizado há ';
+      var countdownStr = '(atualizado a ';
 
       var days = time.days;
       if (days > 0) {
@@ -91,7 +91,7 @@
       var seconds = time.seconds;
       countdownStr += seconds + ' ' + pluralize('segundo', seconds);
 
-      countdownStr += ' atras)';
+      countdownStr += ' atrás)';
 
       sinceEl.innerText = countdownStr;
     }
