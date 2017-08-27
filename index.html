@@ -77,19 +77,19 @@
 
       var days = time.days;
       if (days > 0) {
-        countdownStr += days + ' ' + pluralize('day', days) + ', ';
+        countdownStr += days + ' ' + pluralize('dias', days) + ', ';
       }
 
       var hours = time.hours;
       if (hours > 0) {
-        countdownStr += hours + ' ' + pluralize('hour', hours) + ', ';
+        countdownStr += hours + ' ' + pluralize('horas', hours) + ', ';
       }
 
       var minutes = time.minutes;
-      countdownStr += minutes + ' ' + pluralize('minute', minutes) + ' and ';
+      countdownStr += minutes + ' ' + pluralize('minutos', minutes) + ' , ';
 
       var seconds = time.seconds;
-      countdownStr += seconds + ' ' + pluralize('second', seconds);
+      countdownStr += seconds + ' ' + pluralize('segundos', seconds);
 
       countdownStr += ' atras)';
 
